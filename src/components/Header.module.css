@@ -1,0 +1,61 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-1);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 99;
+}
+
+.header nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.header nav ul li {
+  margin: 0rem 1rem;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: var(--color-4);
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: var(--color-3);
+  transform: translateY(-3px);
+}
+
+.logo {
+  background-image: url(./../../public//vercel.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 6rem;
+  height: 3rem;
+}
+
+.solicitarServicio {
+  background-color: var(--color-2);
+  border-radius: 0.3rem;
+  color: var(--color-1);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.solicitarServicio:hover {
+  background-color: var(--color-1);
+  color: var(--color-2);
+  border: 1px var(--color-2) solid;
+}

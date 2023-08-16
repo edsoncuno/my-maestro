@@ -1,0 +1,5 @@
+.main {
+    background-color: azure;
+    margin: 0 var(--main-margin);
+    margin-top: var(--header-height);
+}
