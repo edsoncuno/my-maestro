@@ -1,0 +1,35 @@
+.app {
+    background-color: white;
+}
+
+.app .titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  margin-bottom: 1rem;
+  background-color: var(--color-2);
+  height: 4rem;
+}
+
+.app .galery {
+  margin: 1rem 0;
+  display: grid;
+  gap: 1rem;
+  --width: 18rem;
+  --height: 20rem;
+  grid-auto-rows: var(--height);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--width), 1fr)
+  );
+}
+.app .galery .feature {
+  grid-column: span 1;
+  /*border: 1px solid green;*/
+  background-color: green;
+  width: var(--width);
+  height: var(--height);
+}

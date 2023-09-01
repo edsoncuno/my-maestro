@@ -40,3 +40,10 @@
   text-decoration: none;
   color: white;
 }
+
+.logoFacebook {
+  width: 3rem;
+  height: 3rem;
+  background-image: url("./facebook-logo.svg");
+  background-size: cover;
+}

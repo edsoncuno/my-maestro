@@ -1,6 +1,6 @@
 import Inicio from "../components/Inicio";
 import Nosotros from "../components/Nosotros";
-import Servicios from "../components/Servicios";
+import Servicios from "../components/servicios/Servicios";
 import Contacto from "../components/Contacto";
 
 import styles from "./page.module.css";

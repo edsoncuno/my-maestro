@@ -37,6 +37,7 @@ export default function App() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              className={styles.logoFacebook}
             />
           </li>
         </ul>
