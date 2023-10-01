@@ -1,7 +1,7 @@
-import Inicio from "../components/Inicio";
-import Nosotros from "../components/Nosotros";
+import Inicio from "../components/inicio/Inicio";
+import Nosotros from "../components/nosotros/Nosotros";
 import Servicios from "../components/servicios/Servicios";
-import Contacto from "../components/Contacto";
+import Contacto from "../components/contacto/Contacto";
 
 import styles from "./page.module.css";
 

@@ -40,6 +40,6 @@
 .imagen {
   width: 90%;
   height: 80%;
-  background-image: url("./../../public//imagen2.png");
+  background-image: url("./assets/imagen2.png");
   background-size: cover;
 }

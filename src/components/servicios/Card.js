@@ -6,9 +6,10 @@ export default function App(props) {
       style={
         props.imagen
           ? {
-              background: `url(${props.imagen})`,
+              backgroundImage: `url(${props.imagen})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }
           : { backgroundColor: "grey" }
       }

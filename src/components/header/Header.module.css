@@ -37,7 +37,7 @@
 }
 
 .logo {
-  background-image: url(./../../public//vercel.svg);
+  background-image: url(./assets/vercel.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
