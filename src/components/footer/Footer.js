@@ -1,9 +1,8 @@
-"use client";
 import styles from "./Footer.module.css";
 
 export default function App() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.app}>
       <div className={styles.enlacesInternos}>
         <h3>Navegación</h3>
         <ul>
@@ -37,8 +36,9 @@ export default function App() {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.logoFacebook}
-            />
+            >
+              <div className={styles.logoFacebook}></div>
+            </a>
           </li>
         </ul>
       </div>

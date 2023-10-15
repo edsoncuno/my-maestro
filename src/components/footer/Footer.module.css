@@ -1,4 +1,4 @@
-.footer {
+.app {
   color: var(--color-1);
   background-color: var(--color-4);
   padding: 2rem 5rem;
@@ -7,24 +7,43 @@
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.footer .enlacesInternos {
+.app .enlacesInternos {
   grid-column: 1 / span 1;
   grid-row: 1/-2;
   display: flex;
   flex-direction: column;
 }
 
-.footer .informacionDeContacto {
+.app .informacionDeContacto {
   grid-column: 2 / span 1;
   grid-row: 1/-2;
 }
 
-.footer .redesSociales {
+.app .redesSociales {
   grid-column: 3 / span 1;
   grid-row: 1/-2;
 }
 
-.footer .textoDeCopyright {
+.app .redesSociales ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.app .redesSociales li {
+  display: inline-block;
+}
+
+.app .redesSociales li .logoFacebook {
+  margin-top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("./assets/facebook-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app .textoDeCopyright {
   grid-column: 1/-1;
   grid-row: -2/-1;
   display: flex;
@@ -32,18 +51,54 @@
   justify-content: center;
 }
 
-.footer ul {
+.app ul {
   list-style-type: none;
 }
 
-.footer a {
+.app a {
   text-decoration: none;
   color: white;
 }
 
-.logoFacebook {
-  width: 3rem;
-  height: 3rem;
-  background-image: url("./assets/facebook-logo.svg");
-  background-size: cover;
+@media (max-width: 850px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app .enlacesInternos {
+    display: block;
+    order: 3;
+    margin-bottom: 1rem;
+  }
+  .app .informacionDeContacto {
+    display: block;
+    order: 2;
+    margin-bottom: 1rem;
+  }
+
+  .app .redesSociales {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  .app .textoDeCopyright {
+    order: 4;
+    display: block;
+    text-align: center;
+  }
+  .app .enlacesInternos h3 {
+    cursor: pointer;
+  }
+  .app .enlacesInternos ul {
+    display: none;
+  }
+
+  .app .enlacesInternos h3:focus,
+  .app .enlacesInternos ul:hover {
+    display: block;
+  }
 }
