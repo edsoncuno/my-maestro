@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [isShowingSideBar, setIsShowingSideBar] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const sections = [
     { href: "#section-inicio", name: "INICIO" },
@@ -30,9 +31,14 @@ export default function App() {
       }
     };
     window.addEventListener("scroll", handleScroll);
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
     return () => {
       // Limpia el listener del evento cuando el componente se desmonta
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -62,10 +68,12 @@ export default function App() {
     <header
       className={styles.header}
       style={{
-        boxShadow: isScrolling
-          ? "0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1)"
-          : "none",
-        backgroundColor: isScrolling ? "white" : "transparent",
+        boxShadow:
+          isScrolling || windowWidth <= 750
+            ? "0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1)"
+            : "none",
+        backgroundColor:
+          isScrolling || windowWidth <= 750 ? "white" : "transparent",
       }}
     >
       <div className={styles.bars} onClick={handleSideBar}></div>
@@ -76,7 +84,10 @@ export default function App() {
       ></a>
       <nav
         className={`${isShowingSideBar ? styles.open : ""}`}
-        style={{ backgroundColor: isScrolling ? "white" : "transparent" }}
+        style={{
+          backgroundColor:
+            isScrolling || windowWidth <= 750 ? "white" : "transparent",
+        }}
       >
         <ul>{list}</ul>
       </nav>
