@@ -1,9 +1,10 @@
 "use client";
 import styles from "./Header.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function App() {
   const [isShowingSideBar, setIsShowingSideBar] = useState(false);
+  const [backgroundColor, setBackgroundColor] = useState("transparent");
 
   const sections = [
     { href: "#section-inicio", name: "INICIO" },
@@ -19,6 +20,21 @@ export default function App() {
       </a>
     </li>
   ));
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setBackgroundColor("white");
+      } else {
+        setBackgroundColor("transparent");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      // Limpia el listener del evento cuando el componente se desmonta
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   function scrollToSection(event) {
     event.preventDefault();
@@ -43,7 +59,10 @@ export default function App() {
   }
 
   return (
-    <header className={styles.header}>
+    <header
+      className={styles.header}
+      style={{ backgroundColor: `${backgroundColor}` }}
+    >
       <div className={styles.bars} onClick={handleSideBar}></div>
       <a
         href="#section-inicio"

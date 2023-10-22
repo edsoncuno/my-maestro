@@ -1,6 +1,6 @@
 import styles from "./Contacto.module.css";
 
-import Mapa from "../nosotros/Mapa";
+import Mapa from "./Mapa";
 
 export default function App() {
   return (

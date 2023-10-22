@@ -1,9 +1,10 @@
 .nosotros {
   background-color: white;
-  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  padding: 0 5%;
 }
 
 .columnaIzquierda {
@@ -41,5 +42,13 @@
   width: 90%;
   height: 80%;
   background-image: url("./assets/imagen2.png");
-  background-size: cover;
+  background-size: cover 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 970px) {
+  .imagen {
+    background-size: 80% 100%;
+  }
 }

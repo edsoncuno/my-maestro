@@ -1,5 +1,5 @@
 .inicio {
-  height: calc(100vh - var(--header-height));
+  height: 100vh;
 }
 
 .container {
