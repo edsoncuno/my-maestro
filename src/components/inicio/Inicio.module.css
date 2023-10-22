@@ -3,39 +3,32 @@
   width: 100%;
 }
 
-.container {
+.app .container {
   width: 100%;
   height: 100%;
-  border: 1px solid green;
+}
+
+.app .container .carrusel {
+  width: 100%;
+  height: 100%;
   background-image: url("./assets/imagen1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.container .carrusel {
-  width: 100%;
-  height: 100%;
-  /*
-  background-image: url("./assets/imagen1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  */
-}
-
-.container .texto {
+.app .container .texto {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.container .texto .titulo {
+.app .container .texto .titulo {
   display: none;
 }
 
-.container .texto .parrafo {
+.app .container .texto .parrafo {
   font-size: 3rem;
   text-shadow: -3px -3px 0 white,
     /* Borde superior izquierdo */ 3px -3px 0 white,
