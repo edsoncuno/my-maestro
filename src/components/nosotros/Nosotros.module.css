@@ -18,7 +18,8 @@
 }
 
 .texto {
-  padding: 3rem;
+  margin: 3rem;
+  padding-right: 3rem;
   border-right: 1px solid black;
 }
 
