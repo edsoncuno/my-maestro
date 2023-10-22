@@ -2,8 +2,8 @@ import styles from "./Nosotros.module.css";
 
 export default function App() {
   return (
-    <section id="section-nosotros" className={styles.nosotros}>
-      <div className={styles.columnaIzquierda}>
+    <section id="section-nosotros" className={styles.app}>
+      <div className={styles.container}>
         <div className={styles.texto}>
           <h2>Nosotros</h2>
           <p>
@@ -15,10 +15,7 @@ export default function App() {
             funcionalidad de tu hogar a nuevas alturas."
           </p>
         </div>
-      </div>
-      <div className={styles.columnaDerecha}>
-        <div className={styles.imagen}>
-        </div>
+        <div className={styles.imagen}></div>
       </div>
     </section>
   );
