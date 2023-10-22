@@ -2,7 +2,14 @@
 
 ## Iniciar el servidor de desarrollo
 
+## Ver
+
+Para ver la pagina web, hay que dirigirse a la siguiente dirección web:
+https://edsoncuno.github.io/my-maestro
+
+
 ```sh
+npm i
 npm run dev
 ```
 

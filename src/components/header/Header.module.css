@@ -14,13 +14,38 @@
   z-index: 99;
 }
 
+.header .bars {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("./../../../public/bars-black.svg");
+  background-size: cover;
+  display: none;
+}
+
+.header .logo {
+  background-image: url(./assets/vercel.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 6rem;
+  height: 3rem;
+}
+
+.header nav {
+  transition: left 0.3s ease-in-out;
+}
+
 .header nav ul {
   display: flex;
   list-style-type: none;
 }
 
 .header nav ul li {
-  margin: 0rem 1rem;
+  margin-right: 2rem;
+}
+
+.header nav ul li:last-child {
+  margin-right: 0rem;
 }
 
 .header nav ul li a {
@@ -36,15 +61,6 @@
   transform: translateY(-3px);
 }
 
-.logo {
-  background-image: url(./assets/vercel.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 6rem;
-  height: 3rem;
-}
-
 .solicitarServicio {
   background-color: var(--color-2);
   border-radius: 0.3rem;
@@ -52,10 +68,59 @@
   font-weight: bold;
   text-decoration: none;
   padding: 0.5rem;
+  border: 1px transparent solid;
 }
 
 .solicitarServicio:hover {
   background-color: var(--color-1);
   color: var(--color-2);
   border: 1px var(--color-2) solid;
+}
+
+.header .open {
+  left: 0;
+}
+
+@media (max-width: 872px) {
+  .header {
+    justify-content: space-around;
+  }
+  .header .logo {
+    display: none;
+  }
+}
+
+@media (max-width: 662px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header .bars {
+    display: block;
+  }
+  .header .logo {
+    display: block;
+  }
+  .header nav {
+    position: absolute;
+    top: var(--header-height);
+    left: -100%;
+    width: 100%;
+    height: 9rem;
+    background-color: var(--color-1);
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .header nav ul li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 }
