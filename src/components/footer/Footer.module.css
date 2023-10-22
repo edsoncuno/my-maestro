@@ -24,6 +24,10 @@
   grid-row: 1/-2;
 }
 
+.app .redesSociales h3{
+  text-align: center;
+}
+
 .app .redesSociales ul {
   display: flex;
   flex-direction: row;

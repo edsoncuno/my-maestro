@@ -69,7 +69,10 @@ export default function App() {
         onClick={(e) => scrollToSection(e)}
         className={styles.logo}
       ></a>
-      <nav className={`${isShowingSideBar ? styles.open : ""}`}>
+      <nav
+        className={`${isShowingSideBar ? styles.open : ""}`}
+        style={{ backgroundColor: `${backgroundColor}` }}
+      >
         <ul>{list}</ul>
       </nav>
       <a

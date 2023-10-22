@@ -1,21 +1,27 @@
 .app {
   height: 100vh;
   width: 100%;
-  min-width: 100%;
 }
 
 .container {
   width: 100%;
   height: 100%;
+  border: 1px solid green;
+  background-image: url("./assets/imagen1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container .carrusel {
   width: 100%;
   height: 100%;
+  /*
   background-image: url("./assets/imagen1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  */
 }
 
 .container .texto {
