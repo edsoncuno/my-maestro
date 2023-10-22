@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function App() {
   const [isShowingSideBar, setIsShowingSideBar] = useState(false);
-  const [backgroundColor, setBackgroundColor] = useState("transparent");
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const sections = [
     { href: "#section-inicio", name: "INICIO" },
@@ -24,9 +24,9 @@ export default function App() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setBackgroundColor("white");
+        setIsScrolling(true);
       } else {
-        setBackgroundColor("transparent");
+        setIsScrolling(false);
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -61,7 +61,12 @@ export default function App() {
   return (
     <header
       className={styles.header}
-      style={{ backgroundColor: `${backgroundColor}` }}
+      style={{
+        boxShadow: isScrolling
+          ? "0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1)"
+          : "none",
+        backgroundColor: isScrolling ? "white" : "transparent",
+      }}
     >
       <div className={styles.bars} onClick={handleSideBar}></div>
       <a
@@ -71,7 +76,7 @@ export default function App() {
       ></a>
       <nav
         className={`${isShowingSideBar ? styles.open : ""}`}
-        style={{ backgroundColor: `${backgroundColor}` }}
+        style={{ backgroundColor: isScrolling ? "white" : "transparent" }}
       >
         <ul>{list}</ul>
       </nav>
