@@ -37,7 +37,9 @@ export default function App() {
     };
     window.addEventListener("scroll", handleScroll);
     function handleResize() {
-      setWindowWidth(document.documentElement.clientWidth);
+      if (typeof window !== "undefined") {
+        setWindowWidth(document.documentElement.clientWidth);
+      }
     }
     window.addEventListener("resize", handleResize);
     return () => {
