@@ -5,9 +5,7 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [isShowingSideBar, setIsShowingSideBar] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(
-    document.documentElement.clientWidth
-  );
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   //document.documentElement.clientWidth;
   // window.innerWidth
 
@@ -38,7 +36,7 @@ export default function App() {
     window.addEventListener("scroll", handleScroll);
     function handleResize() {
       if (typeof window !== "undefined") {
-        setWindowWidth(document.documentElement.clientWidth);
+        setWindowWidth(window.innerWidth);
       }
     }
     window.addEventListener("resize", handleResize);
