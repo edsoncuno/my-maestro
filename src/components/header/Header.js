@@ -5,9 +5,7 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [isShowingSideBar, setIsShowingSideBar] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  //document.documentElement.clientWidth;
-  // window.innerWidth
+  const [windowWidth, setWindowWidth] = useState(0);
 
   const sections = [
     { href: "#section-inicio", name: "INICIO" },
@@ -34,17 +32,12 @@ export default function App() {
       }
     };
     window.addEventListener("scroll", handleScroll);
+
+    //if (typeof window !== "undefined") {}
     function handleResize() {
-      if (typeof window !== "undefined") {
-        setWindowWidth(window.innerWidth);
-      }
+      setWindowWidth(window.innerWidth);
     }
     window.addEventListener("resize", handleResize);
-    return () => {
-      // Limpia el listener del evento cuando el componente se desmonta
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
   }, []);
 
   function scrollToSection(event) {
