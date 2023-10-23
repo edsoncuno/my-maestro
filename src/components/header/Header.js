@@ -5,7 +5,11 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [isShowingSideBar, setIsShowingSideBar] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(
+    document.documentElement.clientWidth
+  );
+  //document.documentElement.clientWidth;
+  // window.innerWidth
 
   const sections = [
     { href: "#section-inicio", name: "INICIO" },
@@ -33,7 +37,7 @@ export default function App() {
     };
     window.addEventListener("scroll", handleScroll);
     function handleResize() {
-      setWindowWidth(window.innerWidth);
+      setWindowWidth(document.documentElement.clientWidth);
     }
     window.addEventListener("resize", handleResize);
     return () => {
