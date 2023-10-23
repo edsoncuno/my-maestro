@@ -1,17 +1,14 @@
 import styles from "./Contacto.module.css";
-
 import Mapa from "./Mapa";
 
 export default function App() {
   return (
-    <section id="section-contacto" className={styles.contacto}>
+    <section id="section-contacto" className={styles.app}>
       <h2 className={styles.titulo}>Contacto</h2>
-      <div className={styles.columnaIzquierda}>
-        <div className={styles.mapa}>
-          <Mapa />
-        </div>
+      <div className={styles.mapa}>
+        <Mapa />
       </div>
-      <div className={styles.columnaDerecha}>
+      <div className={styles.datos}>
         <div className={styles.fila}>
           <div className={styles.facebook}></div>
           <div>Facebook</div>
