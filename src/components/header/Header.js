@@ -17,6 +17,7 @@ export default function App() {
   const list = sections.map((item) => (
     <li key={"id_" + item.name}>
       <a href={item.href} onClick={(e) => scrollToSection(e)}>
+        {" "}
         {item.name}
       </a>
     </li>
@@ -85,8 +86,7 @@ export default function App() {
       <nav
         className={`${isShowingSideBar ? styles.open : ""}`}
         style={{
-          backgroundColor:
-            isScrolling || windowWidth <= 750 ? "white" : "transparent",
+          backgroundColor: windowWidth <= 750 ? "white" : "transparent",
         }}
       >
         <ul>{list}</ul>
