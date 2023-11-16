@@ -38,47 +38,56 @@
 
 .app .datos .fila {
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 1.5rem;
-  justify-content: space-between;
-  padding: 0 4rem;
+  min-height: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-row: 1fr;
+}
+
+.app .datos .fila .valor {
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .facebook {
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
   background-image: url("./assets/facebook-3-logo-svgrepo-com.svg");
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .whatsapp {
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
   background-image: url("./assets/whatsapp-svgrepo-com.svg");
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .call {
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
   background-image: url("./assets/phone-call-essential-svgrepo-com.svg");
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .direccion {
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
   background-image: url("./assets/maps-gps-svgrepo-com.svg");
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .correo {
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
+  grid-row: 1/2;
+  grid-column: 1/2;
   background-image: url("./assets/email-mail-svgrepo-com.svg");
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 @media (max-width: 750px) {
@@ -91,5 +100,9 @@
 
   .app .datos {
     width: 100%;
+  }
+
+  .app .datos .fila .valor {
+    font-size: 1rem;
   }
 }
