@@ -1,6 +1,6 @@
 .app {
-    background-color: white;
-    padding: 0 5%;
+  background-color: white;
+  padding: 0 5%;
 }
 
 .app .titulo {
@@ -18,19 +18,12 @@
 .app .galery {
   margin: 1rem 0;
   display: grid;
-  gap: 1rem;
-  --width: 18rem;
-  --height: 20rem;
-  grid-auto-rows: var(--height);
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--width), 1fr)
-  );
+  --width: 17rem;
+  /*nota: donde dice --with en un valor muy cercano al ancho del item a utilizar*/
+  grid-template-columns: repeat(auto-fill, minmax(var(--width), 1fr));
+  gap: 0.5rem;
 }
 .app .galery .feature {
-  grid-column: span 1;
-  /*border: 1px solid green;*/
-  background-color: green;
-  width: var(--width);
-  height: var(--height);
+  width: 18rem;
+  height: 20rem;
 }
