@@ -29,9 +29,7 @@ export default function App() {
   return (
     <section id="section-servicios" className={styles.app}>
       <h2 className={styles.titulo}>Servicios</h2>
-      <div className={styles.galery}>
-        {listaDeServicios}
-      </div>
+      <div className={styles.galery}>{listaDeServicios}</div>
     </section>
   );
 }

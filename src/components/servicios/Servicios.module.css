@@ -18,12 +18,13 @@
 .app .galery {
   margin: 1rem 0;
   display: grid;
-  --width: 17rem;
+  --width: 18rem;
   /*nota: donde dice --with en un valor muy cercano al ancho del item a utilizar*/
   grid-template-columns: repeat(auto-fill, minmax(var(--width), 1fr));
   gap: 0.5rem;
+  place-content: center;
 }
 .app .galery .feature {
-  width: 18rem;
+  width: var(--width);
   height: 20rem;
 }
