@@ -28,3 +28,39 @@
   width: var(--width);
   height: 20rem;
 }
+
+@media (max-width: 1306px) {
+  .app .galery {
+    --width: 18rem;
+  }
+}
+
+@media (max-width: 1191px) {
+  .app .galery {
+    --width: 30rem;
+  }
+}
+
+@media (max-width: 1075px) {
+  .app .galery {
+    --width: 26rem;
+  }
+}
+
+@media (max-width: 933px) {
+  .app .galery {
+    --width: 22rem;
+  }
+}
+
+@media (max-width: 791px) {
+  .app .galery {
+    --width: 18rem;
+  }
+}
+
+@media (max-width: 648px) {
+  .app .galery {
+    --width: 100%;
+  }
+}

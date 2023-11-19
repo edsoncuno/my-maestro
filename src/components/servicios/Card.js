@@ -8,7 +8,7 @@ export default function App(props) {
           props.imagen
             ? {
                 backgroundImage: `url(${props.imagen})`,
-                backgroundSize: "cover",
+                backgroundSize: "100% 100%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
               }
