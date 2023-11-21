@@ -1,4 +1,5 @@
 import styles from "./Nosotros.module.css";
+import Carousel from "./../carousel";
 
 export default function App() {
   return (
@@ -15,7 +16,17 @@ export default function App() {
             funcionalidad de tu hogar a nuevas alturas."
           </p>
         </div>
-        <div className={styles.imagen}></div>
+        <div className={styles.imagen}>
+          <Carousel
+            slides={[
+              "./nosotros_assets/imagen1.jpg",
+              "./nosotros_assets/imagen2.png",
+              "./nosotros_assets/imagen3.jpg",
+            ]}
+            width={"100%"}
+            height={"72vh"}
+          />
+        </div>
       </div>
     </section>
   );

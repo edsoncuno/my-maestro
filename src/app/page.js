@@ -4,9 +4,6 @@ import Contacto from "../components/contacto/Contacto";
 import Servicios from "../components/servicios/Servicios";
 
 export default function Home() {
-  /*
-      <Servicios />
-  */
   return (
     <main>
       <Inicio />

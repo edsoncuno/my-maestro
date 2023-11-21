@@ -33,10 +33,6 @@
 .app .container .imagen {
   width: 50%;
   height: 80%;
-  background-image: url("./assets/imagen2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 @media (max-width: 1000px) {
