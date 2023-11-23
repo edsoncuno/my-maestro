@@ -1,37 +1,14 @@
 .app {
   height: 100vh;
   width: 100%;
-}
-
-.app .container {
-  width: 100%;
-  height: 100%;
-}
-
-.app .container .carrusel {
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/imagen1.png");
+  background-image: url("./assets/fondo-desktop.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.app .container .texto {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.app .container .texto .titulo {
-  display: none;
-}
-
-.app .container .texto .parrafo {
-  font-size: 3rem;
-  text-shadow: -3px -3px 0 white,
-    /* Borde superior izquierdo */ 3px -3px 0 white,
-    /* Borde superior derecho */ -3px 3px 0 white,
-    /* Borde inferior izquierdo */ 3px 3px 0 white; /* Borde inferior derecho */
+@media (max-width: 768px) {
+  .app {
+    background-image: url("./assets/fondo-mobile.png");
+    background-size: cover;
+  }
 }
