@@ -5,7 +5,29 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
 }
+
+.app .redesSociales {
+  grid-row: 4/5;
+  grid-column: 2/-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app .redesSociales ul {
+  list-style: none;
+}
+
+@media (max-width: 1280px) {
+  .app {
+    background-size: 100% 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .app {
     background-image: url("./assets/fondo-mobile.png");
