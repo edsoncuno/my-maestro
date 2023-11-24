@@ -20,6 +20,33 @@
 
 .app .redesSociales ul {
   list-style: none;
+  display: flex;
+}
+
+.app .redesSociales ul li {
+  margin-right: 1rem;
+}
+
+.app .redesSociales ul li:last-child {
+  margin-right: 0;
+}
+
+.facebook {
+  width: 4rem;
+  height: 4rem;
+  background-image: url("./assets/facebook.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.whatsapp {
+  width: 4rem;
+  height: 4rem;
+  background-image: url("./assets/whatsapp.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 1280px) {
