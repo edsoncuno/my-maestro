@@ -7,14 +7,20 @@ export default function App() {
       <div className={styles.redesSociales}>
         <ul>
           <li>
-            <a href="www.google.com" target="_blank" rel="noopener noreferrer">
-              <div className={styles.facebook}></div>
-            </a>
+            <a
+              href="www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.facebook}
+            ></a>
           </li>
           <li>
-            <a href="www.google.com" target="_blank" rel="noopener noreferrer">
-              <div className={styles.whatsapp}></div>
-            </a>
+            <a
+              href="www.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.whatsapp}
+            ></a>
           </li>
         </ul>
       </div>

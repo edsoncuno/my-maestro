@@ -31,9 +31,13 @@
   margin-right: 0;
 }
 
-.facebook {
+.app .redesSociales ul li a {
+  display: block;
   width: 4rem;
   height: 4rem;
+}
+
+.facebook {
   background-image: url("./assets/facebook.svg");
   background-size: cover;
   background-position: center;
@@ -41,8 +45,6 @@
 }
 
 .whatsapp {
-  width: 4rem;
-  height: 4rem;
   background-image: url("./assets/whatsapp.svg");
   background-size: cover;
   background-position: center;

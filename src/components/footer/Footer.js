@@ -41,6 +41,14 @@ export default function App() {
               <div className={styles.logoFacebook}></div>
             </a>
           </li>
+          <li>
+            <a
+              href={link_facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.logoWhatsapp}
+            ></a>
+          </li>
         </ul>
       </div>
       <div className={styles.textoDeCopyright}>

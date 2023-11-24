@@ -34,8 +34,13 @@
   justify-content: center;
 }
 
-.app .redesSociales li {
+.app .redesSociales ul li {
   display: inline-block;
+  margin-right: 1rem;
+}
+
+.app .redesSociales ul li:last-child {
+  margin-right: 0;
 }
 
 .app .redesSociales li .logoFacebook {
@@ -43,6 +48,17 @@
   width: 2rem;
   height: 2rem;
   background-image: url("./assets/facebook-logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logoWhatsapp {
+  margin-top: 1rem;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("./assets/whatsapp.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
